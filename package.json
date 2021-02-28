@@ -1,0 +1,53 @@
+{
+  "name": "abutaleb.me",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "build:css": "npm run css:scss && npm run css:autoprefixer",
+    "watch:css": "onchange \"src/scss\" -- npm run build:css",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
+    "build:js": "webpack --mode=production",
+    "watch:js": "onchange \"src/js\" -- webpack --mode=development",
+    "build:html": "posthtml -c posthtml.json",
+    "watch:html": "onchange \"src/views\" -- npm run build:html",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/images",
+    "watch:images": "onchange \"src/images\" -- npm run build:images",
+    "watch": "run-p serve watch:*",
+    "build": "run-p build:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aabutaleb/abutaleb.me.git"
+  },
+  "author": "Amin Abu-Taleb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aabutaleb/abutaleb.me/issues"
+  },
+  "homepage": "https://github.com/aabutaleb/abutaleb.me#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "htmlnano": "^0.2.8",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "posthtml": "^0.15.1",
+    "posthtml-cli": "^0.9.1",
+    "posthtml-modules": "^0.7.3",
+    "webpack": "^5.20.0",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "run": "^1.4.0",
+    "serve": "^11.3.2"
+  }
+}

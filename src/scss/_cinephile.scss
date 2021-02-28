@@ -1,0 +1,200 @@
+html, input[type="search"] {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  background: #00BFB2;
+  background: -webkit-linear-gradient(to bottom, #00BFB2 , #028090);
+  background: linear-gradient(to bottom, #00BFB2 , #028090);
+  padding: 30px 60px 70px 60px;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background: #00BFB2;
+  display: block;
+  border-bottom: 10px solid #353535;
+  font-family: 'Work Sans', sans-serif;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  background: #FFEFFF;
+}
+
+.content {
+  position:relative;
+  height: 100%;
+  width: 100%;
+}
+
+header p {
+  text-align: center;
+  font-size: 28px;
+}
+
+code {
+  background: #FFEFFF;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+#add_to_slack {
+  height: 60px;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+#add_to_slack img{
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+#add_to_slack img:hover{
+  transform: scale(1.1);
+}
+
+nav ul li {
+  display: block;
+  list-style: none;
+  float: right;
+  font-family: 'Work Sans', sans-serif;
+}
+
+nav ul li:hover {
+  color: #FFF;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+li {
+  padding: 0px 20px;
+}
+
+footer p {
+  font-size: 13px;
+  text-align: center;
+  color: #353535;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer img {
+  width: 20px;
+  height: 20px;
+  padding: 0px 3px;
+}
+
+footer img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.content {
+  display: block;
+  padding: 30px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+// features
+
+.featureWrapper {
+  display: flex;
+  //flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.feature {
+  flex: 1 0 50%;
+  text-align: center;
+  padding: 30px;
+}
+
+.feature code{
+  color: #C64191;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feature h3 {
+  font-weight: 400;
+  font-size: 1.35em;
+}
+
+section p {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  display: block;
+  font-weight: 300;
+}
+
+
+//pricing
+.plans {
+  display: flex;
+}
+
+.plan {
+  width: 25%;
+  min-width: 20%;
+  margin: 0 auto;
+  float: left;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04), 0 0px 1px rgba(28,39,72,.15), 0 6px 34px rgba(0,0,0,.09);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.plan h3 {
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 10px 0;
+  font-size: 26px;
+}
+
+.planFeatures {
+  font-size: 0.8rem;
+  list-style: none;
+  opacity: 0.6;
+  padding: 0;
+}
+
+.planFeatures li {
+  padding: 6px 0;
+}
+
+.cost {
+  font-size: 30px;
+  color: #3EC891;
+  font-weight: 200;
+}
+
+.planFeatures code {
+  color: #C64191;
+  font-weight: bold;
+  font-size: 15px;
+}
